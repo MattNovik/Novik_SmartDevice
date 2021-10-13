@@ -29,6 +29,12 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
+gulp.task("script", function () {
+  return gulp.src("source/js/script.js")
+    .pipe(gulp.dest("build/js"))
+    .pipe(server.stream())
+});
+
 gulp.task("server", function () {
   server.init({
     server: "build/",
@@ -86,7 +92,8 @@ gulp.task("copy", function () {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
-    "source//*.ico"
+    "source//*.ico",
+    "source/manifest.webmanifest",
     ], {
       base: "source"
     })
@@ -97,5 +104,5 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "webp","images", "script"));
 gulp.task("start", gulp.series("build", "server"));
