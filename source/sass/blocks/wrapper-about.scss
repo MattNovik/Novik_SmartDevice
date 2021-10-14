@@ -1,4 +1,90 @@
 .wrapper-about {
+  position: relative;
+  min-height: 317px;
   width:1170px;
+  padding:0 0 0 180px;
   margin:110px auto 0;
+  box-sizing: border-box;
+  z-index: 10;
+
+  p:nth-child(2) {
+    font-family: 'PT Mono', "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #666666;
+    margin:33px 0 0 0;
+  }
+
+  p:nth-child(3) {
+    font-family: 'PT Mono', "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #666666;
+    margin:18px 0 0 0;
+  }
+
+  &:before {
+    content:"";
+    position: absolute;
+    top:0;
+    left:-35px;
+    width:220px;
+    height:317px;
+    background-image: url("../../img/2005.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 636px;
+    height: 860px;
+    left: -570px;
+    bottom: -150px;
+    background-image: url("../../img/triangle_about.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index:-1;
+    transform: rotate(0deg);
+  }
+}
+
+.wrapper-about__name {
+  font-family: 'Roboto Condensed', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: #666666;
+  margin:0;
+}
+
+.wrapper-about__info {
+  width:180px;
+  height: 45px;
+  border: 1px solid $main;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: 'Roboto Condensed', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $main;
+  margin:38px 0 0 0;
+
+  &:hover {
+    color:#fff;
+    background-color: $main;
+    cursor: pointer;
+  }
 }

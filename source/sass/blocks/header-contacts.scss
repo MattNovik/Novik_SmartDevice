@@ -16,6 +16,10 @@
   color:#fff;
   text-decoration: none;
   padding:0 0 0 48px;
+
+  &:hover {
+    color:$main;
+  }
 }
 
 .header-contacts__post {
@@ -66,5 +70,7 @@
 
   &:hover {
     cursor: pointer;
+    background-color: $main;
+    border:solid 1px $main;
   }
 }

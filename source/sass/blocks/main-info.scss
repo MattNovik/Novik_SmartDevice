@@ -42,7 +42,7 @@
 .main-info__open-modal {
   width:407px;
   height:55px;
-  background: #00B2FF;
+  background: $main;
   border-radius: 5px;
   border:none;
   outline:none;
@@ -56,4 +56,11 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color:#fff;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color:$main;
+    border:1px solid #fff;
+  }
 }

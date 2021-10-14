@@ -1,0 +1,18 @@
+.wrapper-advantages-about {
+  position: relative;
+  width: 100%;
+  z-index: -2;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 636px;
+    height: 860px;
+    left:calc(50% - 260px);
+    top:40px;
+    background-image: url("../../img/triangle_about.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
+  }
+}

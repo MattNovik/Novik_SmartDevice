@@ -1,0 +1,28 @@
+.wrapper-form {
+  width:100%;
+  padding:96px 0 113px 0;
+  background-color: $main;
+}
+
+.wrapper-form__block {
+  position: relative;
+  width:1170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin:0 auto;
+  z-index: 10;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top:-10px;
+    left:-155px;
+    width:620px;
+    height:515px;
+    background-image: url('../../img/microscheme-bg__desk.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+}

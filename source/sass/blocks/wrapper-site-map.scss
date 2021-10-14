@@ -1,0 +1,32 @@
+.wrapper-site-map {
+  display: flex;
+  justify-content: flex-start;
+  margin:29px 0 0 0;
+}
+
+.wrapper-site-map__first,
+.wrapper-site-map__second {
+  margin:0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    font-family: PT Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    color: #1B2D37;
+    opacity: 0.5;
+    text-decoration: none;
+
+    &:hover {
+      color:$main;
+      opacity: 1;
+    }
+  }
+}
+
+.wrapper-site-map__first {
+  margin:0 65px 0 0;
+}

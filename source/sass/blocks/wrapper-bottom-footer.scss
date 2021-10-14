@@ -1,0 +1,26 @@
+.wrapper-bottom-footer {
+  width:1412px;
+  display: flex;
+  justify-content: space-between;
+  margin:14px auto;
+
+  p,a {
+    font-family: 'PT Mono', "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #1B2D37;
+    opacity: .5;
+    text-decoration: none;
+    margin:0;
+  }
+
+  a {
+    &:hover {
+    color:$main;
+    }
+  }
+}

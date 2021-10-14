@@ -8,12 +8,14 @@
   box-sizing: border-box;
   border: 1px solid #EBEBEB;
   border-left:solid 3px $main;
+  background-color: #fff;
 
   &:hover {
     background-color: $main;
     border-top:1px solid $main;
     border-right:1px solid $main;
     border-bottom:1px solid $main;
+    cursor: pointer;
 
     svg {
       path {
@@ -28,6 +30,23 @@
     .advantage__text {
       color:#fff;
     }
+  }
+}
+
+.advantage--first {
+  position: relative;
+
+  &:after {
+    content: "";
+    position:absolute;
+    top:-60px;
+    left:-230px;
+    width: 298px;
+    height: 298px;
+    background-image: url("../../img/triangle_advantages.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
   }
 }
 

@@ -2,8 +2,10 @@
   position: relative;
   height:505px;
   width:705px;
+  z-index: 10;
 
-  &:before {
+
+  &:after {
     content: "";
     position: absolute;
     top:0;
@@ -13,5 +15,6 @@
     background-image: url('../../img/microscheme-bg__desk.png');
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: -1;
   }
 }

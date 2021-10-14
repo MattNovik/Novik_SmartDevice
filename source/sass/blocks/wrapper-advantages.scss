@@ -1,8 +1,24 @@
 .wrapper-advantages {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width:1170px;
   height:auto;
   margin:112px auto 0;
+  z-index: 15;
+
+  &:after {
+    content: "";
+    position:absolute;
+    bottom:20px;
+    right:-360px;
+    width: 298.06px;
+    height: 298.06px;
+    background-image: url("../../img/triangle_advantages.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(180deg);
+    z-index: -1;
+  }
 }
