@@ -2,9 +2,14 @@
   width:100%;
   padding:96px 0 113px 0;
   background-color: $main;
+  box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
     padding:83px 0 103px 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding:33px 0 41px 0;
   }
 }
 
@@ -55,5 +60,10 @@
     &:after {
       content:none;
     }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding:0 15px;
+    box-sizing: border-box;
   }
 }

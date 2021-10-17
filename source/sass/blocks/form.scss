@@ -21,6 +21,10 @@
     font-size: 32px;
     line-height: 45px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    width:100%;
+  }
 }
 
 .form__text {
@@ -38,6 +42,10 @@
 
   @media (max-width: $tablet-width) {
     width:590px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width:100%;
   }
 }
 
@@ -69,6 +77,10 @@
       margin:41px 0 0 0;
     }
 
+    @media (max-width: $mobile-width-only) {
+      margin:30px 0 0 0;
+    }
+
     &:hover {
       border:solid 1px #fff;
     }
@@ -94,6 +106,14 @@
 
     textarea {
       height:159px;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width:100%;
+
+    textarea {
+      height:104px;
     }
   }
 }

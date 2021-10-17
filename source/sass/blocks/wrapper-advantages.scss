@@ -26,4 +26,10 @@
   @media (max-width: $tablet-width) {
     margin:54px auto 0;
   }
+
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 }

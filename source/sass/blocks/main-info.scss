@@ -19,6 +19,13 @@
     width:427px;
     margin:83px 0 0 63px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    width:100%;
+    max-width: 350px;
+    margin:194px 0 0 0;
+    z-index: 10;
+  }
 }
 
 .main-info__name {
@@ -46,6 +53,11 @@
     font-size: 60px;
     line-height: 70px;
     margin:0;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 40px;
+    line-height: 47px;
   }
 }
 
@@ -78,6 +90,11 @@
       left:-48px;
       width:33px;
     }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size:16px;
+    line-height: 25px;
   }
 }
 
@@ -113,5 +130,14 @@
   @media (max-width: $tablet-width) {
     width:379px;
     margin:37px 0 0 48px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width:287px;
+    margin:42px 0 0 0;
+
+    span {
+      display: none;
+    }
   }
 }

@@ -3,10 +3,38 @@
   justify-content: space-between;
   height:52px;
   width:202px;
+
+  @media (max-width: $mobile-width-only) {
+    width:auto;
+    height:38px;
+
+    &.wrapper-logo--footer {
+      height: 52px;
+      width: 216px;
+
+      img {
+        width:52px;
+        height:52px;
+      }
+    }
+
+    img {
+      width:38px;
+      height:38px;
+    }
+  }
 }
 
 .wrapper-logo__text {
   width:100%;
   height:100%;
   margin:6px 0 0 16px;
+
+  @media (max-width:$mobile-width-only) {
+    display: none;
+
+    &.wrapper-logo__text--footer {
+      display: block;
+    }
+  }
 }

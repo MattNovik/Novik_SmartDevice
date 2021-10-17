@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
   height:45px;
+
+  @media (max-width:$mobile-width-only) {
+    height:38px;
+  }
 }
 
 .header-contacts__post,
@@ -29,6 +33,10 @@
     p {
       display: none;
     }
+  }
+
+  @media (max-width:$mobile-width-only) {
+    line-height:38px;
   }
 }
 

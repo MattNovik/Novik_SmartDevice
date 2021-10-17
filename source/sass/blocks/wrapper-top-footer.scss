@@ -2,7 +2,7 @@
   width:100%;
   display: flex;
   justify-content: space-between;
-  border-bottom:1px solid #626962;
+  border-bottom:1px solid rgba(98,105,98,.2);
   padding:0 0 55px 0;
 
   @media (max-width: $desktop-width) {
@@ -30,6 +30,11 @@
     "logo logo"
     "site-map place";
   }
+
+  @media (max-width: $mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .wrapper-top-footer__first-block {
@@ -41,8 +46,13 @@
     grid-area: logo;
     flex-direction: row;
     align-items: center;
-    border-bottom:solid 1px #626962;
+    border-bottom:solid 1px rgba(98,105,98,.2);
     padding:0 25px 26px 25px;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
   }
 }
 
@@ -75,6 +85,11 @@
     grid-area: place;
     margin:38px 0 0 0;
   }
+
+  @media (max-width:$mobile-width-only) {
+    padding:0 25px 23px 25px;
+    box-sizing: border-box;
+  }
 }
 
 .wrapper-top-footer__second-block {
@@ -85,6 +100,11 @@
   @media (max-width: $tablet-width) {
     margin:38px 0 0 0;
     grid-area: site-map;
-    padding:0 0 0 25px;
+    padding:0 25px 23px 25px;
+    box-sizing: border-box;
+  }
+
+  @media (max-width:$mobile-width-only) {
+    border-bottom:solid 1px rgba(98,105,98,.2);
   }
 }

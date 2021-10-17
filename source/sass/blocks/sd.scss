@@ -13,4 +13,8 @@
     color: #1B2D37;
     opacity: 0.5;
   }
+
+  @media (max-width: $mobile-width-only) {
+    margin:26px 0 0 0;
+  }
 }

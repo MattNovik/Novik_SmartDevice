@@ -114,6 +114,10 @@
   @media (max-width: $tablet-width) {
     margin:43px 0 0 44px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    margin:23px 0 0 35px;
+  }
 }
 
 .services-blocks__link {

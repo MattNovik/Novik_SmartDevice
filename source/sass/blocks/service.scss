@@ -12,6 +12,10 @@
   @media (max-width: $tablet-width) {
     padding:53px 25px 32px 25px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    padding:53px 15px 32px 15px;
+  }
 }
 
 .service__name {
@@ -22,4 +26,18 @@
   line-height: 51px;
   color: #fff;
   margin:0;
+
+  @media (max-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding:0 25px 0 25px;
+  }
 }
