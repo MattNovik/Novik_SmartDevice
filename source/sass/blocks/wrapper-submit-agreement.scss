@@ -59,6 +59,16 @@
       line-height: 16px;
     }
   }
+
+  @media (max-width: $tablet-width) {
+    width:590px;
+    margin:45px 0 0 0;
+
+    label {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
 }
 
 .wrapper-submit-agreement__send {
@@ -91,5 +101,11 @@
     min-width:200px;
     width:200px;
     margin:0 20px 0 0;
+  }
+
+  @media (max-width: $desktop-medium-width) {
+    min-width:280px;
+    width:280px;
+    margin:0 39px 0 0;
   }
 }

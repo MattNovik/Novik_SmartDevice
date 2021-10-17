@@ -22,4 +22,8 @@
     transform: rotate(180deg);
     z-index: -1;
   }
+
+  @media (max-width: $tablet-width) {
+    margin:54px auto 0;
+  }
 }

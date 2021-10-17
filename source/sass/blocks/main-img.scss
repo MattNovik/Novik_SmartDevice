@@ -31,4 +31,19 @@
       height:349px;
     }
   }
+
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    top:103px;
+    right:-205px;
+    width:465px;
+    height:340px;
+
+    &:after {
+      width:488px;
+      height:405px;
+      top:-31px;
+      left:-50px;
+    }
+  }
 }

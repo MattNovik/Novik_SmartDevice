@@ -8,6 +8,10 @@
     box-sizing: border-box;
     padding:93px 42px 127px 42px;
   }
+
+  @media (max-width: $tablet-width) {
+    padding:53px 25px 32px 25px;
+  }
 }
 
 .service__name {

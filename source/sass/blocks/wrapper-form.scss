@@ -2,6 +2,10 @@
   width:100%;
   padding:96px 0 113px 0;
   background-color: $main;
+
+  @media (max-width: $tablet-width) {
+    padding:83px 0 103px 0;
+  }
 }
 
 .wrapper-form__block {
@@ -42,6 +46,14 @@
       top:10px;
       width:470px;
       height:390px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    justify-content: center;
+
+    &:after {
+      content:none;
     }
   }
 }

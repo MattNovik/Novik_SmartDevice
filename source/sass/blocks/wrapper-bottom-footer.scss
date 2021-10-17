@@ -29,4 +29,13 @@
     padding:0 42px 55px 42px;
     box-sizing: border-box;
   }
+
+  @media (max-width: $tablet-width) {
+    padding:0 27px 0;
+    margin:21px auto 24px auto;
+    p:first-child,
+    p:nth-child(2) {
+      display: none;
+    }
+  }
 }

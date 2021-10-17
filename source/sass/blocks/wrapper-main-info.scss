@@ -12,6 +12,10 @@
   @media (max-width: $desktop-medium-width) {
     height:780px;
   }
+
+  @media (max-width: $tablet-width) {
+    height:686px;
+  }
 }
 
 .wrapper-main-info__bg {
@@ -25,5 +29,9 @@
     padding:0 42px;
     box-sizing: border-box;
     margin:150px auto 0 auto;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin:33px auto 0 auto;
   }
 }

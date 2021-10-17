@@ -36,6 +36,11 @@
   @media (max-width: $desktop-medium-width) {
     max-width:460px;
   }
+
+  @media (max-width: $tablet-width) {
+    max-width:345px;
+    min-height: 306px;
+  }
 }
 
 .advantage--first {
@@ -64,6 +69,10 @@
 
   @media (max-width:$desktop-medium-width) {
     margin:0 15px 0 0;
+  }
+
+  @media (max-width:$tablet-width) {
+    margin:0 28px 0 0;
   }
 }
 

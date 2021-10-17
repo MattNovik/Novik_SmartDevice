@@ -22,4 +22,8 @@
     padding:0 42px;
     box-sizing: border-box;
   }
+
+  @media (max-width: $tablet-width) {
+    padding:0 25px;
+  }
 }

@@ -53,6 +53,29 @@
     z-index:-1;
     transform: rotate(0deg);
   }
+
+  @media (max-width: $tablet-width) {
+    margin:60px auto 0;
+    padding:0 0 0 190px;
+
+    p:nth-child(2) {
+      margin:23px 0 0 0;
+    }
+
+    p:nth-child(3) {
+      display: -webkit-box;
+      -webkit-line-clamp: 4; // количество строк
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    &:before {
+      top:0;
+      left:-35px;
+      width:240px;
+      height:350px;
+    }
+  }
 }
 
 .wrapper-about__name {
@@ -87,5 +110,9 @@
     color:#fff;
     background-color: $main;
     cursor: pointer;
+  }
+
+  @media (max-width:$tablet-width) {
+    margin:34px 0 0 0;
   }
 }
