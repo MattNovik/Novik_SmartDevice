@@ -4,6 +4,16 @@
   align-items: flex-start;
   justify-content: flex-start;
   width:718px;
+  margin:0 71px 0 0;
+
+  @media (max-width: $desktop-width) {
+    width:550px;
+  }
+
+  @media (max-width: $desktop-medium-width) {
+    width:490px;
+    margin:0 42px 0 0;
+  }
 }
 
 .main-info__name {
@@ -16,6 +26,16 @@
   text-transform: uppercase;
   color: #fff;
   margin:55px 0 0 0;
+
+  @media (max-width: $desktop-width) {
+    font-size: 60px;
+    line-height: 74px;
+  }
+
+  @media (max-width: $desktop-medium-width) {
+    font-size: 50px;
+    line-height: 54px;
+  }
 }
 
 .main-info__text {
@@ -62,5 +82,9 @@
     background-color: #fff;
     color:$main;
     border:1px solid #fff;
+  }
+
+  @media (max-width: $desktop-medium-width) {
+    width:397px;
   }
 }

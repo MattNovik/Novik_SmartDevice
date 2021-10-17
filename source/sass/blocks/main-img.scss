@@ -4,6 +4,10 @@
   width:705px;
   z-index: 10;
 
+  img {
+    width:100%;
+    height:100%;
+  }
 
   &:after {
     content: "";
@@ -16,5 +20,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+  }
+
+  @media (max-width: $desktop-medium-width) {
+    height:287px;
+    width:403px;
+
+    &:after {
+      width:420px;
+      height:349px;
+    }
   }
 }

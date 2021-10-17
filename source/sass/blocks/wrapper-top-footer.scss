@@ -4,10 +4,16 @@
   justify-content: space-between;
   border-bottom:1px solid #626962;
   padding:0 0 55px 0;
+
+  @media (max-width: $desktop-width) {
+    padding:0 42px 55px 42px;
+    box-sizing: border-box;
+  }
 }
 
 .wrapper-top-footer__wrap {
-  width:1412px;
+  width:100%;
+  max-width:1412px;
   display: flex;
   justify-content: space-between;
   margin:0 auto;
@@ -38,4 +44,14 @@
       opacity: 1;
     }
   }
+
+  @media(max-width:$desktop-medium-width) {
+    width:270px;
+  }
+}
+
+.wrapper-top-footer__second-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

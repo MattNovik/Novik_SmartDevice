@@ -1,5 +1,6 @@
 .wrapper-bottom-footer {
-  width:1412px;
+  max-width:1412px;
+  width:100%;
   display: flex;
   justify-content: space-between;
   margin:14px auto;
@@ -22,5 +23,10 @@
     &:hover {
     color:$main;
     }
+  }
+
+  @media (max-width: $desktop-width) {
+    padding:0 42px 55px 42px;
+    box-sizing: border-box;
   }
 }

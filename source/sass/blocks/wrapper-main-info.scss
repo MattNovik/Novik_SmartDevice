@@ -8,11 +8,22 @@
   background-image: url('../../img/main__desk.png');
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (max-width: $desktop-medium-width) {
+    height:780px;
+  }
 }
 
 .wrapper-main-info__bg {
   display: flex;
   justify-content: space-between;
-  width:1494px;
+  width:100%;
+  max-width:1494px;
   margin:176px auto 0 auto;
+
+  @media (max-width: $desktop-width)  {
+    padding:0 42px;
+    box-sizing: border-box;
+    margin:150px auto 0 auto;
+  }
 }

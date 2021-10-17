@@ -1,10 +1,11 @@
 .advantage {
   position: relative;
-  width:570px;
+  max-width:570px;
+  width:100%;
   min-height:299px;
   border:solid 1px green;
   margin:30px 0 0 0;
-  padding: 40px 0 0 45px;
+  padding: 40px 10px 0 45px;
   box-sizing: border-box;
   border: 1px solid #EBEBEB;
   border-left:solid 3px $main;
@@ -31,6 +32,10 @@
       color:#fff;
     }
   }
+
+  @media (max-width: $desktop-medium-width) {
+    max-width:460px;
+  }
 }
 
 .advantage--first {
@@ -53,6 +58,13 @@
 .advantage:nth-child(1),
 .advantage:nth-child(2) {
   margin:0;
+}
+
+.advantage:nth-child(odd) {
+
+  @media (max-width:$desktop-medium-width) {
+    margin:0 15px 0 0;
+  }
 }
 
 .advantage__name {

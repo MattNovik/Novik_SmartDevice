@@ -2,6 +2,10 @@
   width:570px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $desktop-medium-width) {
+    width:430px;
+  }
 }
 
 .wrapper-name-tel__name,
@@ -23,6 +27,10 @@
 
   &:hover {
     border:solid 1px #fff;
+  }
+
+  @media (max-width: $desktop-medium-width) {
+    width:200px;
   }
 }
 

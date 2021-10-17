@@ -13,6 +13,7 @@
   width:370px;
   height:620px;
   box-sizing: border-box;
+  text-decoration: none;
 
   &:hover {
     .services-blocks__link {
@@ -23,6 +24,11 @@
         }
       }
     }
+  }
+
+  @media (max-width: $desktop-medium-width) {
+    width:270px;
+    height:453px;
   }
 }
 

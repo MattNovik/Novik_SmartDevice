@@ -6,7 +6,8 @@
 
 .wrapper-form__block {
   position: relative;
-  width:1170px;
+  max-width:1170px;
+  width:100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -24,5 +25,23 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+  }
+
+  @media( max-width: $desktop-width) {
+
+    &:after {
+      left:42px;
+    }
+  }
+
+  @media (max-width: $desktop-medium-width) {
+    padding:0 42px;
+    box-sizing: border-box;
+
+    &:after {
+      top:10px;
+      width:470px;
+      height:390px;
+    }
   }
 }

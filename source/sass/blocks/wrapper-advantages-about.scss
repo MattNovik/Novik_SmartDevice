@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   z-index: -2;
+  overflow: hidden;
 
   &:after {
     content: "";
@@ -14,5 +15,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     transform: rotate(180deg);
+  }
+
+  @media (max-width: $desktop-medium-width) {
+    margin:0 auto;
+    padding:0 42px;
+    box-sizing: border-box;
   }
 }

@@ -2,8 +2,11 @@
   display:flex;
   justify-content: space-between;
   align-items: center;
-  width:1411px;
+  width:100%;
+  max-width:1494px;
   height: auto;
   margin:37px auto 0 auto;
+  padding:0 42px;
   z-index: 10;
+  box-sizing: border-box;
 }
