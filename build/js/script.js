@@ -54,10 +54,8 @@ telFormPopup.addEventListener('input', () => {
   const valueLength = tel.value.length;
   let reg = /[^0-9\-\(\)\+\ ]/gi;
   let regexp = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
-  let k = 0;
-  if (k == 0 && valueLength == 6) {
+  if (valueLength == 6) {
     number = number.replace(/(\d{3})/, '$1)');
-    k++;
   }
   number = number.replace(/(\d{3})(\d{3})(\d{4})/, '$1)$2$3');
   tel.value = number;
