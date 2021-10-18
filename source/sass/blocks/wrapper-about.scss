@@ -46,12 +46,19 @@
     width: 636px;
     height: 860px;
     left: -570px;
-    bottom: -150px;
+    bottom: 0px;
     background-image: url("../../img/triangle_about.png");
     background-repeat: no-repeat;
     background-size: cover;
     z-index:-1;
     transform: rotate(0deg);
+  }
+
+  @media (max-wixth: $desktop-medium-width) {
+
+    &:after {
+      content:none;
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -70,10 +77,10 @@
     }
 
     &:before {
-      top:0;
+      top:-17px;
       left:-35px;
       width:240px;
-      height:350px;
+      height:340px;
     }
   }
 

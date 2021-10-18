@@ -23,6 +23,21 @@
     z-index: -1;
   }
 
+  @media (max-width: $desktop-width) {
+    height:505px;
+    width:658px;
+
+    img {
+      height:471px;
+      width:658px;
+    }
+
+    &:after {
+      width:620px;
+      height:515px;
+    }
+  }
+
   @media (max-width: $desktop-medium-width) {
     height:350px;
     width:440px;

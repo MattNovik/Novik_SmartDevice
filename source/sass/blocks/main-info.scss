@@ -11,7 +11,7 @@
   }
 
   @media (max-width: $desktop-medium-width) {
-    width:490px;
+    width:458px;
     margin:0 42px 0 0;
   }
 
@@ -99,6 +99,9 @@
 }
 
 .main-info__open-modal {
+  display:flex;
+  align-items: center;
+  justify-content: center;
   width:407px;
   height:55px;
   background: $main;
@@ -115,6 +118,8 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color:#fff;
+  text-decoration: none;
+  white-space: pre;
 
   &:hover {
     cursor: pointer;
@@ -124,7 +129,7 @@
   }
 
   @media (max-width: $desktop-medium-width) {
-    width:397px;
+    width:365px;
   }
 
   @media (max-width: $tablet-width) {

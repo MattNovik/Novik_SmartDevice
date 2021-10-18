@@ -39,7 +39,7 @@
   @media( max-width: $desktop-width) {
 
     &:after {
-      left:42px;
+      left:-50px;
     }
   }
 
@@ -49,6 +49,7 @@
 
     &:after {
       top:10px;
+      left:42px;
       width:470px;
       height:390px;
     }

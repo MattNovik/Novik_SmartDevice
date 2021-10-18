@@ -1,0 +1,15 @@
+.wrapper-page-module-hover {
+  position: fixed;
+  display: flex;
+  top:0;
+  left:0;
+  right:0;
+  width::100%;
+  height:100%;
+  z-index:20;
+  background-color: rgba(0,0,0,.5);
+
+  &.wrapper-page-module-hover--closed {
+    display: none;
+  }
+}

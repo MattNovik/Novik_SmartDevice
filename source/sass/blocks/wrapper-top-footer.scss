@@ -13,6 +13,10 @@
   @media (max-width: $tablet-width) {
     padding:0 0 33px 0;
   }
+
+  @media (max-width: $mobile-width-only) {
+    padding:0;
+  }
 }
 
 .wrapper-top-footer__wrap {
@@ -87,8 +91,59 @@
   }
 
   @media (max-width:$mobile-width-only) {
-    padding:0 25px 23px 25px;
+    position: relative;
+    padding:0 25px 0 25px;
     box-sizing: border-box;
+
+    a {
+      display: none;
+    }
+
+    &.no-js {
+      padding:0 25px 33px 25px;
+
+      a {
+        display: block;
+      }
+
+      &:before,
+      &:after {
+        content:none;
+      }
+    }
+
+    &.wrapper-top-footer__third-block--open {
+      padding:0 25px 33px 25px;
+
+      a {
+        display: block;
+      }
+
+      &:after {
+        content:none;
+      }
+    }
+
+    &:before {
+      content:"";
+      position: absolute;
+      width:16px;
+      height:1px;
+      top:8px;
+      right:25px;
+      background: #C4C4C4;
+    }
+
+    &:after {
+      content:"";
+      position: absolute;
+      width:16px;
+      height:1px;
+      top:8px;
+      right:25px;
+      transform: rotate(90deg);
+      background: #C4C4C4;
+    }
   }
 }
 
@@ -105,6 +160,58 @@
   }
 
   @media (max-width:$mobile-width-only) {
+    position: relative;
     border-bottom:solid 1px rgba(98,105,98,.2);
+    padding:0 25px 0 25px;
+
+    ul {
+      display: none;
+    }
+
+    &.no-js {
+      padding:0 25px 23px 25px;
+
+      ul {
+        display: block;
+      }
+
+      &:before,
+      &:after {
+        content:none;
+      }
+    }
+
+    &.wrapper-top-footer__second-block--open {
+      padding:0 25px 23px 25px;
+
+      ul {
+        display: block;
+      }
+
+      &:after {
+        content:none;
+      }
+    }
+
+    &:before {
+      content:"";
+      position: absolute;
+      width:16px;
+      height:1px;
+      top:8px;
+      right:25px;
+      background: #C4C4C4;
+    }
+
+    &:after {
+      content:"";
+      position: absolute;
+      width:16px;
+      height:1px;
+      top:8px;
+      right:25px;
+      transform: rotate(90deg);
+      background: #C4C4C4;
+    }
   }
 }
