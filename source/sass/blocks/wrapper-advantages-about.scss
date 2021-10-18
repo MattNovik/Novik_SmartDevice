@@ -8,12 +8,22 @@
     position: absolute;
     width: 636px;
     height: 860px;
-    left:calc(50% - 260px);
-    top:40px;
-    background-image: url("../../img/triangle_about.png");
+    left:calc(50% - 130px);
+    top:20px;
+    background-image: url("../img/triangle_about.png");
+    background-image: image-set(
+      url("../img/triangle_about.webp") type("image/webp"),
+      url("../img/triangle_about.png") type("image/jpeg"));
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     transform: rotate(180deg);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/triangle_about@2x.png");
+      background-image: image-set(
+        url("../img/triangle_about@2x.webp") type("image/webp"),
+        url("../img/triangle_about@2x.png") type("image/jpeg"));
+    }
   }
 
   @media (max-width: $desktop-medium-width) {
@@ -24,9 +34,16 @@
 
   @media (max-width: $tablet-width) {
     padding:0 25px;
+
+    &:after {
+      top:105px;
+      width:515px;
+      height:715px;
+      left:calc(50% + 95px);
+    }
   }
 
   @media (max-width: $mobile-width-only) {
-    padding:0 15px;
+    padding:0 15px 0 15px;;
   }
 }

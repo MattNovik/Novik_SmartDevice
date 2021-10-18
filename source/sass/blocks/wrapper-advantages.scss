@@ -12,15 +12,24 @@
   &:after {
     content: "";
     position:absolute;
-    bottom:20px;
-    right:-360px;
-    width: 298.06px;
-    height: 298.06px;
-    background-image: url("../../img/triangle_advantages.png");
+    bottom:50px;
+    right:-340px;
+    width: 260px;
+    height: 250px;
+    background-image: url("../img/triangle_advantages.png");
+    background-image: image-set(
+        url("../img/triangle_advantages.webp") type("image/webp"),
+        url("../img/triangle_advantages.png") type("image/jpeg"));
     background-repeat: no-repeat;
     background-size: contain;
     transform: rotate(180deg);
     z-index: -1;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/triangle_advantages@2x.png");
+      background-image: image-set(
+        url("../img/triangle_advantages@2x.webp") type("image/webp"),
+        url("../img/triangle_advantages@2x.png") type("image/jpeg"));
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -31,5 +40,6 @@
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
+    margin:37px 0 0 0;
   }
 }

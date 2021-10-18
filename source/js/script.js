@@ -5,7 +5,7 @@ const openPopup = document.querySelector('.header-contacts__call');
 const pageHover = document.querySelector('.wrapper-page-module-hover')
 const popupClose = document.querySelector('.form__close');
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
-const formQuestions = document.querySelector('.form_form--questions');
+const formQuestions = document.querySelector('.form__form--questions');
 
 const nameFormPopup = popup.querySelector('.wrapper-name-tel__name');
 const telFormPopup = popup.querySelector('.wrapper-name-tel__telephone');
@@ -135,12 +135,12 @@ const isEscEvent = (evt) => {
 };
 
 const onPopupEscKeydown = (evt) => {
-	if (isEscEvent(evt)) {
-		evt.preventDefault();
-		popup.classList.add('form--close');
-		pageHover.classList.add('wrapper-page-module-hover--closed');
+  if (isEscEvent(evt)) {
+    evt.preventDefault();
+    popup.classList.add('form--close');
+    pageHover.classList.add('wrapper-page-module-hover--closed');
     page.classList.remove('globe-page--hidden');
-	}
+  }
 };
 
 openPopup.addEventListener('click', () => {
@@ -155,33 +155,32 @@ openPopup.addEventListener('click', () => {
 
 pageHover.addEventListener('click', () => {
   popup.classList.add('form--close');
-	pageHover.classList.add('wrapper-page-module-hover--closed');
+  pageHover.classList.add('wrapper-page-module-hover--closed');
   document.removeEventListener('keydown', onPopupEscKeydown);
 });
 
 popupClose.addEventListener('click', () => {
   popup.classList.add('form--close');
-	pageHover.classList.add('wrapper-page-module-hover--closed');
+  pageHover.classList.add('wrapper-page-module-hover--closed');
   page.classList.remove('globe-page--hidden');
   document.removeEventListener('keydown', onPopupEscKeydown);
 });
 
 popup.addEventListener("submit", (evt) => {
-	evt.preventDefault();
+  evt.preventDefault();
   popup.classList.add('form--close');
-	pageHover.classList.add('wrapper-page-module-hover--closed');
+  pageHover.classList.add('wrapper-page-module-hover--closed');
   page.classList.remove('globe-page--hidden');
-	document.addEventListener("keydown", onPopupEscKeydown);
-	localStorage.setItem("telephone", popup.querySelector(".wrapper-name-tel__telephone").value);
-	localStorage.setItem("name", popup.querySelector(".wrapper-name-tel__name").value);
+  document.addEventListener("keydown", onPopupEscKeydown);
+  localStorage.setItem("telephone", popup.querySelector(".wrapper-name-tel__telephone").value);
+  localStorage.setItem("name", popup.querySelector(".wrapper-name-tel__name").value);
   alert('succesfull send');
 });
 
 formQuestions.addEventListener('submit', (evt) => {
   evt.preventDefault();
   localStorage.setItem('telephone', formQuestions.querySelector('.wrapper-name-tel__telephone').value);
-	localStorage.setItem('name', formQuestions.querySelector('.wrapper-name-tel__name').value);
+  localStorage.setItem('name', formQuestions.querySelector('.wrapper-name-tel__name').value);
   formQuestions.reset();
   alert('succesfull send');
 })
-

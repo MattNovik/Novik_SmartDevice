@@ -5,7 +5,7 @@
   width:100%;
   max-width:1494px;
   height: auto;
-  margin:37px auto 0 auto;
+  margin:34px auto 0 auto;
   padding:0 42px;
   z-index: 10;
   box-sizing: border-box;
@@ -16,7 +16,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    margin:17px auto 0 auto;
-    padding:0 15px;
+    margin:16px auto 0 auto;
+    padding:0 17px;
   }
 }

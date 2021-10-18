@@ -24,6 +24,7 @@
   .wrapper-name-tel__name,
   .wrapper-name-tel__telephone {
     width:100%;
+    padding:0px 0 0 24px;
   }
 
 }
@@ -53,7 +54,7 @@
     border:solid 1px #fff;
   }
 
-   &:active {
+  &:active {
     border:solid 1px #fff;
   }
 
@@ -62,6 +63,7 @@
   }
 
   @media (max-width: $tablet-width) {
+    height:52px;
     width:280px;
   }
 

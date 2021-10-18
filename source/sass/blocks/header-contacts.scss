@@ -4,7 +4,7 @@
   height:45px;
 
   @media (max-width:$mobile-width-only) {
-    height:38px;
+    height:30px;
   }
 }
 
@@ -27,6 +27,12 @@
 
   &:hover {
     color:$main;
+
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -36,23 +42,12 @@
   }
 
   @media (max-width:$mobile-width-only) {
-    line-height:38px;
+    line-height:35px;
   }
 }
 
 .header-contacts__post {
-  margin:0 88px 0 0;
-  /* &:before {
-    content: "";
-    position:absolute;
-    left:0;
-    top:calc(50% - 7px);
-    width:19px;
-    height:14px;
-    background-image: url('../../img/post.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  } */
+  margin:0 85px 0 0;
 
   @media (max-width: $tablet-width) {
     margin:0 33px 0 0;
@@ -62,21 +57,21 @@
       height:19px;
     }
   }
+
+  @media (max-width: $mobile-width-only) {
+    margin:0 23px 0 0;
+
+    svg {
+      path {
+        width: 25px;
+        height: 18px;
+      }
+    }
+  }
 }
 
 .header-contacts__phone {
-  margin:0 38px 0 0;
-/*   &:before {
-    content: "";
-    position:absolute;
-    left:0;
-    top:calc(50% - 9px);
-    width:18px;
-    height:18px;
-    background-image: url('../../img/phone.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  } */
+  margin:0 50px 0 0;
 
   @media (max-width: $tablet-width) {
     margin:0;

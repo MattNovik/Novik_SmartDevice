@@ -8,14 +8,14 @@
     padding:83px 0 103px 0;
   }
 
-  @media (max-width: $tablet-width) {
-    padding:33px 0 41px 0;
+  @media (max-width: $mobile-width-only) {
+    padding:33px 0 36px 0;
   }
 }
 
 .wrapper-form__block {
   position: relative;
-  max-width:1170px;
+  max-width:1210px;
   width:100%;
   display: flex;
   justify-content: space-between;
@@ -27,13 +27,23 @@
     content: "";
     position: absolute;
     top:-10px;
-    left:-155px;
+    left:-165px;
     width:620px;
     height:515px;
-    background-image: url('../../img/microscheme-bg__desk.png');
+    background-image: url("../img/microscheme-bg__desk.png");
+    background-image: image-set(
+        url("../img/microscheme-bg__desk.webp") type("image/webp"),
+        url("../img/microscheme-bg__desk.png") type("image/jpeg"));
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/microscheme-bg__desk@2x.png");
+      background-image: image-set(
+          url("../img/microscheme-bg__desk@2x.webp") type("image/webp"),
+          url("../img/microscheme-bg__desk@2x.png") type("image/jpeg"));
+    }
   }
 
   @media( max-width: $desktop-width) {
@@ -64,7 +74,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    padding:0 15px;
+    padding:0 15px 0 15px;
     box-sizing: border-box;
   }
 }

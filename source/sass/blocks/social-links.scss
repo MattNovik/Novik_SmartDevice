@@ -30,4 +30,14 @@
       }
     }
   }
+
+  @media (max-width: $tablet-width) {
+    margin:0 0 0 16px;
+  }
+}
+.social-links__facebook {
+
+  @media (max-width: $tablet-width) {
+    margin: 0;
+  }
 }

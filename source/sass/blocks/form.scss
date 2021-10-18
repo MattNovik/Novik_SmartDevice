@@ -1,4 +1,15 @@
 .form {
+  margin:0 22px 0 0;
+
+  @media (max-width: $tablet-width) {
+    margin:0;
+  }
+}
+
+.form {
+  &.form--modal {
+    margin:0;
+  }
 }
 
 .form__name {
@@ -23,6 +34,8 @@
 
   @media (max-width: $mobile-width-only) {
     width:100%;
+    font-size: 28px;
+    line-height: 39px;
   }
 }
 
@@ -33,15 +46,21 @@
   font-size: 16px;
   line-height: 22px;
   color: #fff;
-  margin:13px 0 0 0;
+  margin:8px 0 0 0;
 
   @media (max-width: $desktop-medium-width) {
     width:100%;
   }
 
+  @media (max-width: $tablet-width) {
+    width:100%;
+    margin:14px 0 0 0;
+  }
+
 
   @media (max-width: $mobile-width-only) {
     width:100%;
+    margin:12px 0 0 0;
   }
 }
 
@@ -70,11 +89,13 @@
     }
 
     @media (max-width: $tablet-width) {
-      margin:41px 0 0 0;
+      padding:9px 0 0 17px;
+      margin:44px 0 0 0;
     }
 
     @media (max-width: $mobile-width-only) {
       margin:30px 0 0 0;
+      padding:13px 0 0 17px;
     }
 
     &:hover {
@@ -106,7 +127,7 @@
 
   @media (max-width: $tablet-width) {
     width:590px;
-    margin:50px 0 0 0;
+    margin:53px 0 0 0;
 
     textarea {
       height:159px;
@@ -115,6 +136,7 @@
 
   @media (max-width: $mobile-width-only) {
     width:100%;
+    margin:22px 0 0 0;
 
     textarea {
       height:104px;
@@ -130,7 +152,7 @@
   width:490px;
   height:605px;
   background-color: $main;
-  padding:33px 0 0 39px;
+  padding:33px 39px 0 39px;
   box-sizing: border-box;
   z-index: 25;
 
@@ -180,6 +202,7 @@
   }
 
   .form__text {
+    width:400px;
     font-size: 16px;
     line-height: 22px;
   }
@@ -192,5 +215,6 @@
   textarea {
     height:104px;
     margin:30px 0 0 0;
+    padding:14px 0 0 24px;
   }
 }

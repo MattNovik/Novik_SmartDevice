@@ -12,9 +12,10 @@
     text-transform: uppercase;
     color: #1B2D37;
     opacity: 0.5;
+    margin:5px 0 0 15px;
   }
 
   @media (max-width: $mobile-width-only) {
-    margin:26px 0 0 0;
+    margin:24px 0 0 0;
   }
 }

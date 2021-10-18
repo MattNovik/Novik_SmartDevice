@@ -17,10 +17,20 @@
     left:0;
     width:620px;
     height:515px;
-    background-image: url('../../img/microscheme-bg__desk.png');
+    background-image: url('../img/microscheme-bg__desk.png');
+    background-image: image-set(
+      url("../img/microscheme-bg__desk.webp") type("image/webp"),
+      url("../img/microscheme-bg__desk.png") type("image/jpeg"));
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/microscheme-bg__desk@2x.png');
+      background-image: image-set(
+        url("../img/microscheme-bg__desk@2x.webp") type("image/webp"),
+        url("../img/microscheme-bg__desk@2x.png") type("image/jpeg"));
+    }
   }
 
   @media (max-width: $desktop-width) {
@@ -55,7 +65,7 @@
 
   @media (max-width: $tablet-width) {
     position: absolute;
-    top:103px;
+    top:82px;
     right:0;
     width:305px;
     height:405px;
@@ -69,15 +79,15 @@
 
     &:after {
       width:440px;
-      height:365px;
+      height:403px;
       top:-5px;
-      left:-0px;
+      left:-13px;
     }
   }
 
   @media (max-width:$mobile-width-only) {
     position: absolute;
-    top:59px;
+    top:62px;
     left:calc(50% - 130px);
     right:0;
     width:auto;
@@ -92,9 +102,9 @@
 
     &:after {
       width:403px;
-      height:385px;
+      height:390px;
       top:0;
-      left:130px;
+      left:133px;
     }
   }
 }
