@@ -1,6 +1,7 @@
 .globe-page {
   scroll-behavior: smooth;
   position: relative;
+  height:100%;
 
   &.globe-page--hidden {
     overflow:hidden;
