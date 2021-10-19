@@ -21,8 +21,8 @@
   color:#fff;
   text-decoration: none;
 
-  span {
-    margin: 0 0 0 20px;
+  svg {
+      margin:0 20px 0 0;
   }
 
   svg {
@@ -38,9 +38,11 @@
   }
 
   @media (max-width: $tablet-width) {
-    span {
-      display: none;
-    }
+    font-size:0;
+
+    svg {
+      margin:0;
+  }
   }
 
   @media (max-width:$mobile-width-only) {

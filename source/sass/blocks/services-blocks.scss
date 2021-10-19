@@ -41,10 +41,27 @@
     .services-blocks__link {
       background: #fff;
       svg {
-        path {
-          stroke:$main;
-        }
+        stroke:$main;
       }
+    }
+  }
+
+  h4 {
+    width:156px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    margin:53px 0 0 44px;
+
+    @media (max-width: $tablet-width) {
+      margin:42px 0 0 45px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      margin:20px 0 0 35px;
     }
   }
 
@@ -172,25 +189,6 @@
 
   @media (max-width: $mobile-width-only) {
     margin:0 0 30px 0;
-  }
-}
-
-.services-blocks__name {
-  width:156px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 30px;
-  color: #fff;
-  margin:53px 0 0 44px;
-
-  @media (max-width: $tablet-width) {
-    margin:42px 0 0 45px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    margin:20px 0 0 35px;
   }
 }
 

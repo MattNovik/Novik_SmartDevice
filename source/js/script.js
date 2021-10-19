@@ -20,14 +20,20 @@
   const placeOpener = document.querySelector('.place');
   const place = document.querySelector('.wrapper-top-footer__third-block');
 
-  siteMap.classList.remove("no-js");
-  place.classList.remove("no-js");
+  siteMap.classList.remove('no-js');
+  place.classList.remove('no-js');
 
   siteMapOpener.addEventListener('click', ()=> {
+    if (place.classList.contains('wrapper-top-footer__third-block--open')) {
+      place.classList.toggle('wrapper-top-footer__third-block--open')
+    }
     siteMap.classList.toggle('wrapper-top-footer__second-block--open');
   })
 
   placeOpener.addEventListener('click', ()=> {
+    if (siteMap.classList.contains('wrapper-top-footer__second-block--open')) {
+      siteMap.classList.toggle('wrapper-top-footer__second-block--open')
+    }
     place.classList.toggle('wrapper-top-footer__third-block--open');
   })
 
@@ -128,6 +134,7 @@
   pageHover.addEventListener('click', () => {
     popup.classList.add('form--close');
     pageHover.classList.add('wrapper-page-module-hover--closed');
+    page.classList.remove('globe-page--hidden');
     document.removeEventListener('keydown', onPopupEscKeydown);
   });
 
@@ -138,14 +145,14 @@
     document.removeEventListener('keydown', onPopupEscKeydown);
   });
 
-  popup.addEventListener("submit", (evt) => {
+  popup.addEventListener('submit', (evt) => {
     evt.preventDefault();
     popup.classList.add('form--close');
     pageHover.classList.add('wrapper-page-module-hover--closed');
     page.classList.remove('globe-page--hidden');
-    document.addEventListener("keydown", onPopupEscKeydown);
-    localStorage.setItem("telephone", popup.querySelector(".wrapper-name-tel__telephone").value);
-    localStorage.setItem("name", popup.querySelector(".wrapper-name-tel__name").value);
+    document.addEventListener('keydown', onPopupEscKeydown);
+    localStorage.setItem('telephone', popup.querySelector('.wrapper-name-tel__telephone').value);
+    localStorage.setItem('name', popup.querySelector('.wrapper-name-tel__name').value);
     alert('succesfull send');
   });
 
