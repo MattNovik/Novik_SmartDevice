@@ -1,184 +1,159 @@
 'use strict';
-const page = document.querySelector('.globe-page');
-const popup = document.querySelector('.form--modal');
-const openPopup = document.querySelector('.header-contacts__call');
-const pageHover = document.querySelector('.wrapper-page-module-hover')
-const popupClose = document.querySelector('.form__close');
-const smoothLinks = document.querySelectorAll('a[href^="#"]');
-const formQuestions = document.querySelector('.form__form--questions');
+(function () {
+  const page = document.querySelector('.globe-page');
+  const popup = document.querySelector('.form--modal');
+  const openPopup = document.querySelector('.header-contacts__call');
+  const pageHover = document.querySelector('.wrapper-page-module-hover')
+  const popupClose = document.querySelector('.form__close');
+  const smoothLinks = document.querySelectorAll('a[href^="#"]');
+  const formQuestions = document.querySelector('.form__form--questions');
 
-const nameFormPopup = popup.querySelector('.wrapper-name-tel__name');
-const telFormPopup = popup.querySelector('.wrapper-name-tel__telephone');
+  const nameFormPopup = popup.querySelector('.wrapper-name-tel__name');
+  const telFormPopup = popup.querySelector('.wrapper-name-tel__telephone');
 
-const nameForm = formQuestions.querySelector('.wrapper-name-tel__name');
-const telForm = formQuestions.querySelector('.wrapper-name-tel__telephone');
+  const nameForm = formQuestions.querySelector('.wrapper-name-tel__name');
+  const telForm = formQuestions.querySelector('.wrapper-name-tel__telephone');
 
-const siteMapOpener = document.querySelector('.site-map');
-const siteMap = document.querySelector('.wrapper-top-footer__second-block');
+  const siteMapOpener = document.querySelector('.site-map');
+  const siteMap = document.querySelector('.wrapper-top-footer__second-block');
 
-const placeOpener = document.querySelector('.place');
-const place = document.querySelector('.wrapper-top-footer__third-block');
+  const placeOpener = document.querySelector('.place');
+  const place = document.querySelector('.wrapper-top-footer__third-block');
 
-siteMap.classList.remove("no-js");
-place.classList.remove("no-js");
+  siteMap.classList.remove("no-js");
+  place.classList.remove("no-js");
 
-siteMapOpener.addEventListener('click', ()=> {
-  siteMap.classList.toggle('wrapper-top-footer__second-block--open');
-})
+  siteMapOpener.addEventListener('click', ()=> {
+    siteMap.classList.toggle('wrapper-top-footer__second-block--open');
+  })
 
-placeOpener.addEventListener('click', ()=> {
-  place.classList.toggle('wrapper-top-footer__third-block--open');
-})
+  placeOpener.addEventListener('click', ()=> {
+    place.classList.toggle('wrapper-top-footer__third-block--open');
+  })
 
-nameFormPopup.addEventListener('input', () => {
-  const valueLength = nameFormPopup.value.length;
-  if (valueLength < 2) {
-    nameFormPopup.setCustomValidity(`Eщё ${2 - valueLength} сим.`);
-  } else {
-    nameFormPopup.setCustomValidity('');
-  }
-
-  nameFormPopup.reportValidity();
-});
-
-telFormPopup.addEventListener('focus', ()=> {
-  if (telFormPopup.value.length === 0) {
-    telFormPopup.value = '+7(';
-  }
-});
-
-telFormPopup.addEventListener('input', () => {
-  const tel = telFormPopup;
-  let number = tel.value;
-  const MAX_LENGTH = 14;
-  const valueLength = tel.value.length;
-  let reg = /[^0-9\-\(\)\+\ ]/gi;
-  let regexp = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
-  if (valueLength == 6) {
-    number = number.replace(/(\d{3})/, '$1)');
-  }
-  number = number.replace(/(\d{3})(\d{3})(\d{4})/, '$1)$2$3');
-  tel.value = number;
-
-  if (reg.test(number)) {
-    number = number.replace(reg, '');
+  const createTelFormError = (e) => {
+    const tel = e;
+    let number = tel.value;
+    const valueLength = tel.value.length;
+    let reg = /[^0-9\-\(\)\+\ ]/gi;
+    if (valueLength == 6) {
+      number = number.replace(/(\d{3})/, '$1)');
+    }
+    number = number.replace(/(\d{3})(\d{3})(\d{4})/, '$1)$2$3');
     tel.value = number;
-    tel.setCustomValidity(`только цифры`);
-  } else if (valueLength < MAX_LENGTH) {
-    tel.setCustomValidity(`Eщё мин.${MAX_LENGTH - valueLength} сим.`);
-  } else {
-    tel.setCustomValidity('');
-  }
-  tel.reportValidity();
-});
 
-nameForm.addEventListener('input', () => {
-  const valueLength = nameForm.value.length;
-  if (valueLength < 2) {
-    nameForm.setCustomValidity(`Eщё ${2 - valueLength} сим.`);
-  } else {
-    nameForm.setCustomValidity('');
+    if (reg.test(number)) {
+      number = number.replace(reg, '');
+      tel.value = number;
+      tel.setCustomValidity(`только цифры`);
+    } else {
+      tel.setCustomValidity('');
+    }
+    tel.reportValidity();
   }
 
-  nameForm.reportValidity();
-});
+  const createTelFormStartValue = (e) => {
+    if (e.value.length === 0) {
+      e.value = '+7(';
+      e.setCustomValidity(`введите номер телефона 10 цифр`);
+    }
+    e.reportValidity();
+  };
 
-telForm.addEventListener('focus', ()=> {
-  if (telForm.value.length === 0) {
-    telForm.value = '+7(';
-  }
-});
+  const createNameFormMinLengthMessage = (e) => {
+    const valueLength = e.value.length;
+    if (valueLength < 2) {
+      e.setCustomValidity(`Eщё ${2 - valueLength} сим.`);
+    } else {
+      e.setCustomValidity('');
+    }
+    e.reportValidity();
+  };
 
-telForm.addEventListener('input', () => {
-  const tel = telForm;
-  let number = tel.value;
-  const MAX_LENGTH = 14;
-  const valueLength = tel.value.length;
-  let reg = /[^0-9\-\(\)\+\ ]/gi;
-  let regexp = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
-  let k = 0;
-  if (k == 0 && valueLength == 6) {
-    number = number.replace(/(\d{3})/, '$1)');
-    k++;
-  }
-  number = number.replace(/(\d{3})(\d{3})(\d{4})/, '$1)$2$3');
-  tel.value = number;
-
-  if (reg.test(number)) {
-    number = number.replace(reg, '');
-    tel.value = number;
-    tel.setCustomValidity(`только цифры`);
-  } else if (valueLength < MAX_LENGTH) {
-    tel.setCustomValidity(`Eщё мин.${MAX_LENGTH - valueLength} сим.`);
-  } else {
-    tel.setCustomValidity('');
-  }
-  tel.reportValidity();
-});
-
-for (let smoothLink of smoothLinks) {
-  smoothLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      const id = smoothLink.getAttribute('href');
-
-      document.querySelector(id).scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-      });
+  nameFormPopup.addEventListener('input', (evt) => {
+    createNameFormMinLengthMessage(evt.target);
   });
-};
+  telFormPopup.addEventListener('focus', (evt) => {
+    createTelFormStartValue(evt.target);
+  });
+  telFormPopup.addEventListener('input', (evt) => {
+    createTelFormError(evt.target);
+  });
 
-const isEscEvent = (evt) => {
-  return evt.key === 'Escape' || evt.key === 'Esc';
-};
+  nameForm.addEventListener('input', (evt) => {
+    createNameFormMinLengthMessage(evt.target);
+  });
+  telForm.addEventListener('focus', (evt) => {
+    createTelFormStartValue(evt.target)
+  });
+  telForm.addEventListener('input', (evt) => {
+    createTelFormError(evt.target)
+  });
 
-const onPopupEscKeydown = (evt) => {
-  if (isEscEvent(evt)) {
+  for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+  };
+
+  const isEscEvent = (evt) => {
+    return evt.key === 'Escape' || evt.key === 'Esc';
+  };
+
+  const onPopupEscKeydown = (evt) => {
+    if (isEscEvent(evt)) {
+      evt.preventDefault();
+      popup.classList.add('form--close');
+      pageHover.classList.add('wrapper-page-module-hover--closed');
+      page.classList.remove('globe-page--hidden');
+    }
+  };
+
+  openPopup.addEventListener('click', () => {
+    if (popup.classList.contains('form--close')) {
+      popup.classList.remove('form--close');
+      pageHover.classList.remove('wrapper-page-module-hover--closed');
+      document.addEventListener('keydown', onPopupEscKeydown);
+      popup.querySelector('.wrapper-name-tel__name').focus();
+      page.classList.add('globe-page--hidden');
+    }
+  })
+
+  pageHover.addEventListener('click', () => {
+    popup.classList.add('form--close');
+    pageHover.classList.add('wrapper-page-module-hover--closed');
+    document.removeEventListener('keydown', onPopupEscKeydown);
+  });
+
+  popupClose.addEventListener('click', () => {
+    popup.classList.add('form--close');
+    pageHover.classList.add('wrapper-page-module-hover--closed');
+    page.classList.remove('globe-page--hidden');
+    document.removeEventListener('keydown', onPopupEscKeydown);
+  });
+
+  popup.addEventListener("submit", (evt) => {
     evt.preventDefault();
     popup.classList.add('form--close');
     pageHover.classList.add('wrapper-page-module-hover--closed');
     page.classList.remove('globe-page--hidden');
-  }
-};
+    document.addEventListener("keydown", onPopupEscKeydown);
+    localStorage.setItem("telephone", popup.querySelector(".wrapper-name-tel__telephone").value);
+    localStorage.setItem("name", popup.querySelector(".wrapper-name-tel__name").value);
+    alert('succesfull send');
+  });
 
-openPopup.addEventListener('click', () => {
-  if (popup.classList.contains('form--close')) {
-    popup.classList.remove('form--close');
-    pageHover.classList.remove('wrapper-page-module-hover--closed');
-    document.addEventListener('keydown', onPopupEscKeydown);
-    popup.querySelector('.wrapper-name-tel__name').focus();
-    page.classList.add('globe-page--hidden');
-  }
-})
-
-pageHover.addEventListener('click', () => {
-  popup.classList.add('form--close');
-  pageHover.classList.add('wrapper-page-module-hover--closed');
-  document.removeEventListener('keydown', onPopupEscKeydown);
-});
-
-popupClose.addEventListener('click', () => {
-  popup.classList.add('form--close');
-  pageHover.classList.add('wrapper-page-module-hover--closed');
-  page.classList.remove('globe-page--hidden');
-  document.removeEventListener('keydown', onPopupEscKeydown);
-});
-
-popup.addEventListener("submit", (evt) => {
-  evt.preventDefault();
-  popup.classList.add('form--close');
-  pageHover.classList.add('wrapper-page-module-hover--closed');
-  page.classList.remove('globe-page--hidden');
-  document.addEventListener("keydown", onPopupEscKeydown);
-  localStorage.setItem("telephone", popup.querySelector(".wrapper-name-tel__telephone").value);
-  localStorage.setItem("name", popup.querySelector(".wrapper-name-tel__name").value);
-  alert('succesfull send');
-});
-
-formQuestions.addEventListener('submit', (evt) => {
-  evt.preventDefault();
-  localStorage.setItem('telephone', formQuestions.querySelector('.wrapper-name-tel__telephone').value);
-  localStorage.setItem('name', formQuestions.querySelector('.wrapper-name-tel__name').value);
-  formQuestions.reset();
-  alert('succesfull send');
-})
+  formQuestions.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    localStorage.setItem('telephone', formQuestions.querySelector('.wrapper-name-tel__telephone').value);
+    localStorage.setItem('name', formQuestions.querySelector('.wrapper-name-tel__name').value);
+    formQuestions.reset();
+    alert('succesfull send');
+  })
+})();

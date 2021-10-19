@@ -30,8 +30,8 @@
     display: flex;
     align-items: center;
     height:45px;
-    padding:0 0 0 32px;
-    font-family: 'PT Mono', "Arial", sans-serif;
+    padding:2px 0 0 34px;
+    font-family: "PT Mono", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -47,13 +47,58 @@
     &:before {
       content: "";
       position: absolute;
-      top:8px;
+      top:9px;
       left:0;
       width:16px;
       height: 16px;
       border: 1px solid #fff;
       box-sizing: border-box;
       opacity:1;
+    }
+  }
+
+  button {
+    min-width:270px;
+    width:270px;
+    height:45px;
+    margin:0 38px 0 0;
+    padding:0;
+    border: 1px solid #fff;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #fff;
+      color:$main;
+    }
+
+    @media (max-width: $desktop-medium-width) {
+      min-width:200px;
+      width:200px;
+      margin:0 20px 0 0;
+    }
+
+    @media (max-width: $tablet-width) {
+      min-width:280px;
+      width:280px;
+      margin:0 41px 0 0;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      width:100%;
+      margin:0;
     }
   }
 
@@ -74,7 +119,7 @@
 
   @media (max-width: $tablet-width) {
     width:590px;
-    margin:40px 0 0 0;
+    margin:42px 0 0 2px;
 
     input {
       top:24px;
@@ -84,13 +129,14 @@
     label {
       font-size: 14px;
       line-height: 16px;
+      padding:2px 0 0 32px;
     }
   }
 
   @media (max-width: $mobile-width-only) {
     width: 100%;
     flex-direction: column;
-    margin:30px 0 0 0;
+    margin:29px 0 0 0;
     align-items: flex-start;
 
     input {
@@ -148,54 +194,9 @@
   }
 }
 
-.wrapper-submit-agreement__send {
-  min-width:270px;
-  width:270px;
-  height:45px;
-  margin:0 38px 0 0;
-  padding:0;
-  border: 1px solid #fff;
-  outline: none;
-  box-sizing: border-box;
-  border-radius: 5px;
-  background-color: transparent;
-  font-family: 'Roboto Condensed', "Arial", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #fff;
-
-  &:hover {
-    cursor: pointer;
-    background-color: #fff;
-    color:$main;
-  }
-
-  @media (max-width: $desktop-medium-width) {
-    min-width:200px;
-    width:200px;
-    margin:0 20px 0 0;
-  }
-
-  @media (max-width: $tablet-width) {
-    min-width:280px;
-    width:280px;
-    margin:0 41px 0 0;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    width:100%;
-    margin:0;
-  }
-}
-
 .wrapper-submit-agreement--modal {
 
-  .wrapper-submit-agreement__send {
+  button {
     width:100%;
     margin:0;
   }

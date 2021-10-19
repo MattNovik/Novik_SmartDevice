@@ -23,11 +23,13 @@
   margin:0 16px 0 0;
   height:27px;
 
+  svg {
+    fill:#CDCDCD;
+  }
+
   &:hover {
     svg {
-      path {
         fill:$main;
-      }
     }
   }
 

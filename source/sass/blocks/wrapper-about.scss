@@ -9,7 +9,7 @@
   z-index: 10;
 
   p {
-    font-family: 'PT Mono', "Arial", sans-serif;
+    font-family: "PT Mono", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -18,7 +18,7 @@
   }
 
   p:nth-child(2) {
-    font-family: 'PT Mono', "Arial", sans-serif;
+    font-family: "PT Mono", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -28,7 +28,7 @@
   }
 
   p:nth-child(3) {
-    font-family: 'PT Mono', "Arial", sans-serif;
+    font-family: "PT Mono", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -103,6 +103,7 @@
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      margin:21px 0 0 0;
     }
 
     &:before {
@@ -136,7 +137,7 @@
 }
 
 .wrapper-about__name {
-  font-family: 'Roboto Condensed', "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -162,7 +163,7 @@
   box-sizing: border-box;
   border-radius: 5px;
   background-color: #fff;
-  font-family: 'Roboto Condensed', "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -180,7 +181,7 @@
   }
 
   @media (max-width:$tablet-width) {
-    margin:45px 0 0 0;
+    margin:41px 0 0 0;
   }
 
   @media (max-width: $mobile-width-only) {

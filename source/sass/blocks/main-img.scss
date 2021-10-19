@@ -17,7 +17,7 @@
     left:0;
     width:620px;
     height:515px;
-    background-image: url('../img/microscheme-bg__desk.png');
+    background-image: url("../img/microscheme-bg__desk.png");
     background-image: image-set(
       url("../img/microscheme-bg__desk.webp") type("image/webp"),
       url("../img/microscheme-bg__desk.png") type("image/jpeg"));
@@ -26,7 +26,7 @@
     z-index: -1;
 
     @media (min-resolution: 2dppx) {
-      background-image: url('../img/microscheme-bg__desk@2x.png');
+      background-image: url("../img/microscheme-bg__desk@2x.png");
       background-image: image-set(
         url("../img/microscheme-bg__desk@2x.webp") type("image/webp"),
         url("../img/microscheme-bg__desk@2x.png") type("image/jpeg"));

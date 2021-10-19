@@ -3,6 +3,65 @@
   display: flex;
   justify-content: space-between;
 
+  input {
+    width:270px;
+    height:50px;
+    box-sizing: border-box;
+    padding:0 0 0 17px;
+    border:solid 1px $main;
+    outline: none;
+    margin:0;
+    background-color: rgba(255,255,255,0.1);
+    font-family: "PT Mono", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 50px;
+    color: #fff;
+
+    &:hover {
+      border:solid 1px #fff;
+    }
+
+    &:focus {
+      border:solid 1px #fff;
+    }
+
+    &:active {
+      border:solid 1px #fff;
+    }
+
+    @media (max-width: $desktop-medium-width) {
+      width:200px;
+    }
+
+    @media (max-width: $tablet-width) {
+      height:52px;
+      width:280px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      width:100%;
+    }
+  }
+
+  input[type=text] {
+    margin:0 30px 0 0;
+
+    @media (max-width:$mobile-width-only) {
+      margin:0 0 30px 0;
+    }
+  }
+
+  input::placeholder {
+    font-family: "PT Mono", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 50px;
+    color: #fff;
+  }
+
   @media (max-width: $desktop-medium-width) {
     width:430px;
   }
@@ -21,78 +80,16 @@
   width:100%;
   flex-direction:column;
 
-  .wrapper-name-tel__name,
-  .wrapper-name-tel__telephone {
+  input {
     width:100%;
     padding:0px 0 0 24px;
   }
 
 }
 
-.wrapper-name-tel__name,
-.wrapper-name-tel__telephone {
-  width:270px;
-  height:50px;
-  box-sizing: border-box;
-  padding:0 0 0 17px;
-  border:solid 1px $main;
-  outline: none;
-  margin:0;
-  background-color: rgba(255,255,255,0.1);
-  font-family: 'PT Mono', "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 50px;
-  color: #fff;
-
-  &:hover {
-    border:solid 1px #fff;
-  }
-
-  &:focus {
-    border:solid 1px #fff;
-  }
-
-  &:active {
-    border:solid 1px #fff;
-  }
-
-  @media (max-width: $desktop-medium-width) {
-    width:200px;
-  }
-
-  @media (max-width: $tablet-width) {
-    height:52px;
-    width:280px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    width:100%;
-  }
-}
-
-.wrapper-name-tel__name {
-  margin:0 30px 0 0;
-
-  @media (max-width:$mobile-width-only) {
-    margin:0 0 30px 0;
-  }
-}
-
 .wrapper-name-tel--modal {
 
-  .wrapper-name-tel__name {
+  input[type=text] {
     margin:0 0 30px 0;
   }
-}
-
-.wrapper-name-tel__name::placeholder,
-.wrapper-name-tel__telephone::placeholder {
-  font-family: 'PT Mono', "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 50px;
-  color: #fff;
 }

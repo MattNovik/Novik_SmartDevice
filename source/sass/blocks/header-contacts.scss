@@ -13,7 +13,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  font-family: 'PT Mono', "Arial", sans-serif;
+  font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -21,22 +21,24 @@
   color:#fff;
   text-decoration: none;
 
-  p {
+  span {
     margin: 0 0 0 20px;
+  }
+
+  svg {
+    fill:$main;
   }
 
   &:hover {
     color:$main;
 
     svg {
-      path {
-        fill: #fff;
-      }
+      fill: #fff;
     }
   }
 
   @media (max-width: $tablet-width) {
-    p {
+    span {
       display: none;
     }
   }
@@ -48,6 +50,11 @@
 
 .header-contacts__post {
   margin:0 85px 0 0;
+
+  svg {
+    width:19px;
+    height:14px;
+  }
 
   @media (max-width: $tablet-width) {
     margin:0 33px 0 0;
@@ -62,10 +69,8 @@
     margin:0 23px 0 0;
 
     svg {
-      path {
         width: 25px;
         height: 18px;
-      }
     }
   }
 }
@@ -86,7 +91,7 @@
 .header-contacts__call {
   width:180px;
   height:45px;
-  font-family: 'Roboto Condensed', "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;

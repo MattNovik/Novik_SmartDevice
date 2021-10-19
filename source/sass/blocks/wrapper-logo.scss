@@ -2,10 +2,24 @@
   display: flex;
   justify-content: space-between;
   height:52px;
-  width:202px;
+  width:auto;
+
+  svg {
+    width:52px;
+    min-width:52px;
+    height:52px;
+    fill: $main;
+  }
 
   &.wrapper-logo--footer {
     width:auto;
+
+    svg {
+      width:52px;
+      min-width:52px;
+      height:52px;
+      fill: #000;
+    }
   }
 
   @media (max-width: $mobile-width-only) {
@@ -15,15 +29,11 @@
     &.wrapper-logo--footer {
       height: 52px;
       width: 216px;
-
-      img {
-        width:52px;
-        height:52px;
-      }
     }
 
-    img {
+    svg {
       width:38px;
+      min-width:38px;
       height:38px;
     }
   }
