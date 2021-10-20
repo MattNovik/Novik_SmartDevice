@@ -51,7 +51,6 @@
     if (reg.test(number)) {
       number = number.replace(reg, '');
       tel.value = number;
-      tel.setCustomValidity(`только цифры`);
     } else {
       tel.setCustomValidity('');
     }
@@ -61,24 +60,22 @@
   const createTelFormStartValue = (e) => {
     if (e.value.length === 0) {
       e.value = '+7(';
-      e.setCustomValidity(`введите номер телефона 10 цифр`);
     }
-    e.reportValidity();
   };
 
-  const createNameFormMinLengthMessage = (e) => {
+ /*  const createNameFormMinLengthMessage = (e) => {
     const valueLength = e.value.length;
     if (valueLength < 2) {
-      e.setCustomValidity(`Eщё ${2 - valueLength} сим.`);
+      e.setCustomValidity('')
     } else {
       e.setCustomValidity('');
     }
     e.reportValidity();
-  };
+  }; */
 
-  nameFormPopup.addEventListener('input', (evt) => {
+  /* nameFormPopup.addEventListener('input', (evt) => {
     createNameFormMinLengthMessage(evt.target);
-  });
+  }); */
   telFormPopup.addEventListener('focus', (evt) => {
     createTelFormStartValue(evt.target);
   });
@@ -86,9 +83,9 @@
     createTelFormError(evt.target);
   });
 
-  nameForm.addEventListener('input', (evt) => {
+  /* nameForm.addEventListener('input', (evt) => {
     createNameFormMinLengthMessage(evt.target);
-  });
+  }); */
   telForm.addEventListener('focus', (evt) => {
     createTelFormStartValue(evt.target)
   });

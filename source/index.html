@@ -49,9 +49,9 @@
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <form method="post" enctype="multipart/form-data" autocomplete="off" class="form__form form__form--modal">
         <div class="wrapper-name-tel wrapper-name-tel--modal">
-          <input type="text" class="wrapper-name-tel__name" name="name-call" value="" id="name-call" placeholder="Имя" required>
+          <input title="мин 2 буквы" type="text" class="wrapper-name-tel__name" name="name-call" value="" id="name-call" placeholder="Имя" required minlength="2">
           <label for="name-call"></label>
-          <input type="tel" class="wrapper-name-tel__telephone" name="tel-call" value="" id="telephone-call" placeholder="Телефон" required maxlength="14">
+          <input title="введите 10 цифр" pattern="^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$" type="tel" class="wrapper-name-tel__telephone" name="tel-call" value="" id="telephone-call" placeholder="Телефон" required minlength="14" maxlength="14">
           <label for="telephone-call"></label>
         </div>
         <textarea name="question-call" id="question-call" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
@@ -164,7 +164,7 @@
             <div class="wrapper-name-tel">
               <input type="text" class="wrapper-name-tel__name" id="name" placeholder="Имя" required>
               <label for="name"></label>
-              <input type="tel" class="wrapper-name-tel__telephone" id="telephone" placeholder="Телефон" required maxlength="14">
+              <input title="введите 10 цифр" pattern="^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$" type="tel" class="wrapper-name-tel__telephone" id="telephone" placeholder="Телефон" required minlength="14" maxlength="14">
               <label for="telephone"></label>
             </div>
             <textarea name="question" id="question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
