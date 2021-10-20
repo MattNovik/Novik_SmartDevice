@@ -63,19 +63,6 @@
     }
   };
 
- /*  const createNameFormMinLengthMessage = (e) => {
-    const valueLength = e.value.length;
-    if (valueLength < 2) {
-      e.setCustomValidity('')
-    } else {
-      e.setCustomValidity('');
-    }
-    e.reportValidity();
-  }; */
-
-  /* nameFormPopup.addEventListener('input', (evt) => {
-    createNameFormMinLengthMessage(evt.target);
-  }); */
   telFormPopup.addEventListener('focus', (evt) => {
     createTelFormStartValue(evt.target);
   });
@@ -83,9 +70,6 @@
     createTelFormError(evt.target);
   });
 
-  /* nameForm.addEventListener('input', (evt) => {
-    createNameFormMinLengthMessage(evt.target);
-  }); */
   telForm.addEventListener('focus', (evt) => {
     createTelFormStartValue(evt.target)
   });
