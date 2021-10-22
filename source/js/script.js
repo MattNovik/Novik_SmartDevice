@@ -7,6 +7,7 @@
   const popupClose = document.querySelector('.form__close');
   const smoothLinks = document.querySelectorAll('a[href^="#"]');
   const formQuestions = document.querySelector('.form__form--questions');
+  const agreementPopup = popup.querySelector('.agreement-call');
 
   const nameFormPopup = popup.querySelector('.wrapper-name-tel__name');
   const telFormPopup = popup.querySelector('.wrapper-name-tel__telephone');
@@ -20,8 +21,8 @@
   const placeOpener = document.querySelector('.place');
   const place = document.querySelector('.wrapper-top-footer__third-block');
 
-  siteMap.classList.remove('no-js');
-  place.classList.remove('no-js');
+  siteMap.classList.remove('without-js');
+  place.classList.remove('without-js');
 
   siteMapOpener.addEventListener('click', ()=> {
     if (place.classList.contains('wrapper-top-footer__third-block--open')) {
@@ -144,4 +145,8 @@
     formQuestions.reset();
     alert('succesfull send');
   })
+
+  agreementPopup.addEventListener('blur', (evt) => {
+    popup.querySelector('.wrapper-name-tel__name').focus();
+  });
 })();

@@ -3,6 +3,7 @@
   width: 458px;
   justify-content: flex-start;
   margin:0;
+  box-sizing:border-box;
 
   @media (max-width: $desktop-medium-width) {
     height:100%;
@@ -11,6 +12,10 @@
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
+  }
+
+  @media(max-width: $mobile-width-only) {
+    padding:0 15px;
   }
 }
 
@@ -39,7 +44,23 @@
   @media (max-width: $desktop-medium-width) {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;;
+    justify-content: space-between;
+    
+    li {
+      margin:0 0 10px 0;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    li {
+      margin:0;
+    }
+  }
+}
+
+.wrapper-site-map__second {
+  @media (max-width: $desktop-medium-width) {
+    justify-content:flex-start;
   }
 }
 

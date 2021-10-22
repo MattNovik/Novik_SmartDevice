@@ -8,6 +8,7 @@
   text-transform: uppercase;
   color: #1B2D37;
   margin:0 0 28px 0;
+  box-sizing:border-box;
 
   &:hover {
     cursor: pointer;
@@ -18,6 +19,9 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    margin:0 0 31px 0;
+    margin:0;
+    height:75px;
+    line-height:75px;
+    padding:0 15px;
   }
 }

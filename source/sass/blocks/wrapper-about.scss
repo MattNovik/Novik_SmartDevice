@@ -101,6 +101,7 @@
   @media (max-width: $tablet-width) {
     margin:26px auto 0;
     padding:0 0 0 187px;
+    min-height:351px;
 
     p:first-of-type {
       margin:23px 0 0 0;
@@ -125,6 +126,7 @@
   @media (max-width: $mobile-width-only) {
     margin:38px auto 0;
     padding:0;
+    min-height:auto;
 
     p:first-of-type {
       margin:20px 0 0 0;

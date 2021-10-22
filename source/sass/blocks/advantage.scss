@@ -20,13 +20,12 @@
     border-top:1px solid $main;
     border-right:1px solid $main;
     border-bottom:1px solid $main;
-    cursor: pointer;
 
     svg {
       fill:#fff;
     }
 
-    .advantage__name {
+    h3 {
       color:#fff;
     }
 
@@ -45,13 +44,13 @@
     margin:16px 0 0 0;
 
     @media (max-width: $tablet-width) {
-      margin:9px 0 0 0;
+      margin:3px 0 0 0;
     }
 
     @media (max-width: $mobile-width-only) {
       font-size: 20px;
       line-height: 28px;
-      margin:15px 0 0 0;
+      margin:10px 0 0 0;
     }
   }
 
@@ -131,25 +130,26 @@
   }
 }
 
-.advantage:nth-child(odd) {
-
-  @media (max-width:$desktop-medium-width) {
-    margin:0 15px 0 0;
-  }
-
-  @media (max-width:$tablet-width) {
-    margin:0 28px 0 0;
-  }
-
-  @media (max-width:$mobile-width-only) {
-    margin:0;
-  }
-}
 
 .advantage:nth-child(n) {
   margin: 0 0 30px 0;
 
   @media (max-width: $mobile-width-only) {
+    margin:0 0 20px 0;
+  }
+}
+
+.advantage:nth-child(odd) {
+  
+  @media (max-width:$desktop-medium-width) {
+    margin:0 0 30px 0;
+  }
+
+  @media (max-width:$tablet-width) {
+    margin:0 28px 30px 0;
+  }
+
+  @media (max-width:$mobile-width-only) {
     margin:0 0 20px 0;
   }
 }
@@ -223,7 +223,7 @@
   @media (max-width:$mobile-width-only) {
 
     h3 {
-      margin:6px 0 0 0;
+      margin:10px 0 0 0;
     }
 
     p {
