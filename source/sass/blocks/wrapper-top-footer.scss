@@ -76,7 +76,7 @@
     opacity: 0.5;
     text-decoration: none;
     width:max-content;
-    max-width:100%;
+
 
     &:hover {
       color:$main;
@@ -87,6 +87,10 @@
 
   @media(max-width:$desktop-medium-width) {
     width:270px;
+
+    a:first-of-type {
+      width:200px;
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -95,6 +99,10 @@
     margin:38px 0 0 0;
     padding:0 25px 23px 17px;
     box-sizing: border-box;
+
+    a:first-of-type {
+      width:max-content;
+    }
   }
 
   @media (max-width:$mobile-width-only) {
@@ -102,6 +110,10 @@
     padding:0;
     box-sizing: border-box;
     margin:0;
+
+    a:first-of-type {
+      width:230px;
+    }
 
     a {
       display:none;

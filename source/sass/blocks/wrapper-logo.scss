@@ -24,13 +24,25 @@
     }
   }
 
+  &.wrapper-logo--mob {
+    display:none;
+  }
+
   @media (max-width: $mobile-width-only) {
     width:auto;
     height:38px;
 
+    &.wrapper-logo--tablet {
+      display:none;
+    }
+
     &.wrapper-logo--footer {
       height: 52px;
       width: 216px;
+    }
+
+    &.wrapper-logo--mob {
+      display:block;
     }
 
     svg {

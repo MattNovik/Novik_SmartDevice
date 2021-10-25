@@ -161,8 +161,8 @@
   padding:33px 39px 30px 39px;
   box-sizing: border-box;
   z-index: 25;
-  overflow-y:scroll;
-  max-height:calc(100vh - 185px);
+  overflow-y:auto;
+  max-height:calc(100vh - 137px);
 
   &.form--close {
     display: none;

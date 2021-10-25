@@ -22,13 +22,16 @@
 </head>
 <body class="page">
   <header class="page-header">
-    <div class="wrapper-logo">
-      <svg height="52" width="52" viewBox="0 0 52 52" class="logo"><use xlink:href="img/sprite_auto.svg#icon-logo"></use></svg>
-      <div class="wrapper-logo__text">
-        <p class="logo-text logo-text--header logo-text--first">Smart Device</p>
-        <p class="logo-text logo-text--header logo-text--second">умные технологии</p>
-      </div>
-    </div>
+    <a href="#" class="wrapper-logo wrapper-logo--tablet">
+      <picture>
+        <!-- 1x: 202x52; 2x: 404x104 -->
+        <source srcset="img/head_logo.webp 1x, img/head_logo@2x.webp 2x" type="image/webp">
+        <img src="img/head_logo.png" srcset="img/head_logo.png 1x, img/head_logo@2x.png 2x" alt="logo" width="202" height="52">
+      </picture>
+    </a>
+    <a href="#" class="wrapper-logo wrapper-logo--mob">
+      <svg height="52" width="52" viewBox="0 0 52 52"><use xlink:href="img/sprite_auto.svg#icon-logo"></use></svg>
+    </a>
     <div class="header-contacts">
       <a href="mailto:info@sd.ru" class="header-contacts__post" aria-label="post">
         <svg height="14" width="19" viewBox="0 0 19 14"><use xlink:href="img/sprite_auto.svg#icon-post"></use></svg>
@@ -118,7 +121,7 @@
       <div class="service">
         <h3>Service Device предлагает следующие товары и услуги</h3>
         <div class="services-blocks">
-          <a href="#products" class="services-blocks__block services-blocks__block--first" id="board">
+          <a href="#" class="services-blocks__block services-blocks__block--first" id="board">
             <h4>
               Производство печатных
               плат
@@ -127,7 +130,7 @@
               <svg height="9" width="6" viewBox="0 0 6 9"><use xlink:href="img/sprite_auto.svg#icon-arrow"></use></svg>
             </div>
           </a>
-          <a href="#products" class="services-blocks__block services-blocks__block--second" id="mounting">
+          <a href="#" class="services-blocks__block services-blocks__block--second" id="mounting">
             <h4>
               Монтаж печатных плат
             </h4>
@@ -135,7 +138,7 @@
               <svg height="9" width="6" viewBox="0 0 6 9"><use xlink:href="img/sprite_auto.svg#icon-arrow"></use></svg>
             </div>
           </a>
-          <a href="#products"  class="services-blocks__block services-blocks__block--third" id="accessories">
+          <a href="#"  class="services-blocks__block services-blocks__block--third" id="accessories">
             <h4>
               Комплектующие
               для
@@ -182,27 +185,27 @@
     <div class="wrapper-top-footer">
       <div class="wrapper-top-footer__wrap">
         <div class="wrapper-top-footer__first-block">
-          <div class="wrapper-logo wrapper-logo--footer">
+          <a href="#" class="wrapper-logo wrapper-logo--footer">
             <svg height="52" width="52" viewBox="0 0 52 52" class="logo"><use xlink:href="img/sprite_auto.svg#icon-logo"></use></svg>
             <div class="wrapper-logo__text wrapper-logo__text--footer">
               <p class="logo-text logo-text--footer logo-text--first">Service Device</p>
               <p class="logo-text logo-text--footer logo-text--second">умные технологии</p>
             </div>
-          </div>
+          </a>
           <p class="sd sd--desk">1999-2018 SD Service Devices</p>
           <ul class="social-links">
             <li class="social-links__facebook" >
-              <a href="#contacts" aria-label="facebook">
+              <a href="#" aria-label="facebook">
                 <svg height="27" width="27" viewBox="0 0 27 27" ><use xlink:href="img/sprite_auto.svg#icon-facebook"></use></svg>
               </a>
             </li>
             <li class="social-links__ok"  >
-              <a href="#contacts" aria-label="ok">
+              <a href="#" aria-label="ok">
                 <svg height="27" width="27" viewBox="0 0 27 27" ><use xlink:href="img/sprite_auto.svg#icon-ok"></use></svg>
               </a>
             </li>
             <li class="social-links__vk">
-              <a href="#contacts" aria-label="vk">
+              <a href="#" aria-label="vk">
                 <svg height="27" width="27" viewBox="0 0 27 27"><use xlink:href="img/sprite_auto.svg#icon-vk"></use></svg>
               </a>
             </li>
@@ -212,15 +215,15 @@
           <h4 class="site-map">Разделы сайта</h4>
           <div class="wrapper-site-map">
             <ul class="wrapper-site-map__first">
-              <li><a href="#about">О компании</a></li>
-              <li><a href="#products">Продукты</a></li>
-              <li><a href="#board">Производство печатных плат</a></li>
-              <li><a href="#mounting">Монтаж печатных плат</a></li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Продукты</a></li>
+              <li><a href="#">Производство печатных плат</a></li>
+              <li><a href="#">Монтаж печатных плат</a></li>
             </ul>
             <ul class="wrapper-site-map__second">
-              <li><a href="#accessories">Комплектующие</a></li>
-              <li><a href="#contacts">Доставка</a></li>
-              <li><a href="#contacts">Контакты</a></li>
+              <li><a href="#">Комплектующие</a></li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Контакты</a></li>
             </ul>
           </div>
         </div>
@@ -239,8 +242,8 @@
         <p>1999-2018 SD Service Devices</p>
       </div>
       <div class="wrapper-bottom-footer__links">
-        <a href="#contacts">Условия конфиденциальности</a>
-        <a href="#contacts">Developed by wow studio</a>
+        <a href="#">Условия конфиденциальности</a>
+        <a href="#">Developed by wow studio</a>
       </div>
     </div>
   </footer>

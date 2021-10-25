@@ -78,18 +78,6 @@
     createTelFormError(evt.target)
   });
 
-  for (let smoothLink of smoothLinks) {
-    smoothLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        const id = smoothLink.getAttribute('href');
-
-        document.querySelector(id).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    });
-  };
-
   const isEscEvent = (evt) => {
     return evt.key === 'Escape' || evt.key === 'Esc';
   };
